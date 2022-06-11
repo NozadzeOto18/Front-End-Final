@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+    }
+</style>
+
+<body>
+    
+    <div class="signup">
+        <div>
+            <div class="register_header">    
+                <h1>Sign In</h1>
+            </div>
+            <hr>
+            <form action="main.html" class="register_inputs column">
+                <div class="column">
+                    <label for="email"><b>Email</b></label>
+                    <input class="register_input" type="text" placeholder="Enter Email" name="email" id="email" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input class="register_input" type="password" placeholder="Enter Password" name="password" id="password" required>
+                </div>
+                <button type="submit" class="signin_button">Confirm</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        SetTime();
+        function SetTime(){
+            var date = new Date();
+            var currentDate = date.toISOString().substring(0,10);
+            document.getElementById("date").value = currentDate;
+        }
+
+        function registerValidation()
+        {
+            var email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            var confirm_password = document.getElementById("confirm_password").value;
+            var username = document.getElementById("username").value;
+            var country = document.getElementById("country").value;
+            var city = document.getElementById("city").value;
+            var mobile = document.getElementById("mobile").value;
+
+            let strengthBadge = document.getElementById('StrengthDisp');
+            let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
+            let mediumPassword = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))')
+            
+            
+            if(validateEmail(email)){
+                if (validatePassword(password, confirm_password)){
+                    location.replace("main.html");
+                }
+            }
+            
+        }
+
+        function validateEmail(email)
+        {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(email.match(mailformat)){
+                return true;
+            }
+            else{
+                alert("You have entered an invalid email address!");
+                email.focus();
+                return false;
+            }
+        }
+
+        function validatePassword(psw, cpsw){
+            console.log(psw);
+            console.log(cpsw);
+            if (psw.localeCompare(cpsw) == 0){
+                return true;
+            }else{
+                alert("Passwords do not match");
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>

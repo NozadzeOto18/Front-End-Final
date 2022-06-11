@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuscleWiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+    }
+</style>
+<body>
+    <div id="main" class="main">
+        <div class="header">
+            <img src="./img/logo.png" class="logo" alt="">
+            <div class="topnav" id="myTopnav">
+                <a id="home" onclick="active('home')" href="#main" class="home">Home</a>
+                <span id="pageName" class="pageName">Home</span>
+                <a id="About" onclick="active('About')"  href="#about-app">About</a>
+                <a id="Contact" onclick="active('Contact')" href="#contact">Contact</a>
+                <a id="Download" onclick="active('Download')" target="_blank" href="https://play.google.com/store/apps/details?id=com.musclewiki.macro&hl=ka&gl=US">Download</a>
+                <a id="Developer" target="_blank" onclick="active('Developer')" href="developer.html">Developer</a>
+                <a id="Register" onclick="active('Register')" href="registration.html">Sign Up</a>
+                <a id="Signin" onclick="active('Signin')" href="signin.html">Sign In</a>
+                <a href="javascript:void(0);" class="icon" onclick="navIcon()">
+                    <div class="icon-line"></div>
+                    <div class="icon-line"></div>
+                    <div class="icon-line"></div>
+                </a>
+                <i class="icon-style"></i>
+                </a>
+              </div>
+        </div>
+
+
+
+        <div class="body">
+            <div class="upper">
+                <div class="slider-body">
+                    <div class="slider">
+                        <div class="mySlides fade">
+                            <img src="./img/man.png" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="./img/man1.png" style="width:100%">
+                        </div> 
+                        <div class="mySlides fade">
+                            <img src="./img/man2.png" style="width:100%">
+                        </div> 
+                        <div class="mySlides fade">
+                            <img src="./img/man3.png" style="width:100%">
+                        </div> 
+                        <div class="mySlides fade">
+                            <img src="./img/man4.png" style="width:100%">
+                        </div> 
+                        <div class="mySlides fade">
+                            <img src="./img/woman.png" style="width:100%">
+                        </div> 
+                        <div class="mySlides fade">
+                            <img src="./img/woman1.png" style="width:100%">
+                        </div> 
+                        <div class="mySlides fade">
+                            <img src="./img/woman2.png" style="width:100%">
+                        </div> 
+                        <div class="mySlides fade">
+                            <img src="./img/woman3.png" style="width:100%">
+                        </div> 
+                        <div class="mySlides fade">
+                            <img src="./img/woman4.png" style="width:100%">
+                        </div> 
+
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
+                            <span class="dot" onclick="currentSlide(3)"></span> 
+                            <span class="dot" onclick="currentSlide(4)"></span> 
+                            <span class="dot" onclick="currentSlide(5)"></span> 
+                            <span class="dot" onclick="currentSlide(6)"></span> 
+                            <span class="dot" onclick="currentSlide(7)"></span> 
+                            <span class="dot" onclick="currentSlide(8)"></span> 
+                            <span class="dot" onclick="currentSlide(9)"></span> 
+                            <span class="dot" onclick="currentSlide(10)"></span> 
+                        </div>
+                    </div>
+                </div> 
+                <div class="right-side">  
+                    <div class="description">
+                        <h2 class="welcome">Welcome to <span style="color: #b42323;" >Muscle</span>Wiki</h2>
+                        <p>MuscleWiki is a community built upon the principle that fitness should be simple. The difficulty lies in the journey – not the directions. This is an app where access to fitness related information is immediately accessible and easily digested. There is no need for bloated videos or hyper marketing, just direct access to what you need to achieve your fitness goal</p>
+                    </div>
+                </div>
+            </div>
+            <div id="about-app" class="lower">
+                <div class="first">
+                    <p>This app allows you to centre in on any body part, for example the chest and will give you a number of exercises which will train that body part. Information is presented in both gif and descriptive form to enable an easy understanding of the exercise.Additionally, there are tools to allow you to calculate macros and count calories in line with your goals. <br> <br> <span style="color: #b42323;">NOTE: This app downloads the videos to your phone as you load them. Please do so on WiFi as this may use your data plan.</span></p>
+                </div>
+                <div class="second">
+                    <div class="details">
+                        <div class="block-margin">
+                            <h3>Version</h3>
+                            <p>2.0.46</p>
+                            <h3>Requires Android</h3>
+                            <p>5.0 and up</p>
+                            <h3>In-app purchases</h3>
+                            <p>$1.99 per item</p>
+                            <h3>Data safety</h3>
+                            <p>See Details</p>
+                        </div>
+                        <div class="block-margin">
+                            <h3>Updated on</h3>
+                            <p>Jun 6, 2022</p>
+                            <h3>Downloads</h3>
+                            <p>100,000+ downloads</p>
+                            <h3>Content rating</h3>
+                            <p>Everyone</p>
+                            <h3>Released on</h3>
+                            <p>Aug 29, 2021</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <img src="./img/Bicepss.png" style="width:100%">
+                    </div> 
+                </div>
+
+           </div>
+        </div>
+
+        <div id="contact" class="footer">
+            <div class="contacts">
+                <div class="contact1">
+                    <div class="contact">
+                        <h2>Facebook</h2>
+                        <a target="_blank" href="https://www.facebook.com/musclewiki">facebook.com/musclewiki</a>
+                    </div>
+                    <div class="contact">
+                        <h2>Instagram</h2>
+                        <a target="_blank" href="https://instagram.com/musclewiki">instagram.com/musclewiki</a>
+                    </div>
+                    <div class="contact">
+                        <h2>Twitter</h2>
+                        <a target="_blank" href="https://twitter.com/musclewiki">twitter.com/musclewiki</a>
+                    </div>
+                </div>
+                <div class="contact2">
+                    <div class="contact">
+                        <h2>Online app</h2>
+                        <a target="_blank" href="https://musclewiki.com/">musclewiki@mail.com</a>
+                    </div>
+                    <div class="contact">
+                        <h2>Email</h2>
+                        <a>musclewiki@mail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
